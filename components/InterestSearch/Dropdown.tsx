@@ -13,15 +13,15 @@ type InterestDropdownProps = {
     existing: boolean;
   }>;
   loading: boolean;
-  onEndReached: () => void;
-  onPress: (item: InterestDropdownProps['data'][number]) => void;
+  // onEndReached: () => void;
+  // onPress: (item: InterestDropdownProps['data'][number]) => void;
 };
 
 export const InterestDropdown = ({
   data,
   loading,
-  onEndReached,
-  onPress,
+  // onEndReached,
+  // onPress,
 }: InterestDropdownProps) => {
   return (
     <View
@@ -44,7 +44,7 @@ export const InterestDropdown = ({
               name={item.name}
               color={item.color}
               avatar={item.avatar}
-              onPress={() => onPress(item)}
+              // onPress={() => onPress(item)}
             />
           )}
           ListFooterComponent={
@@ -56,7 +56,7 @@ export const InterestDropdown = ({
               </>
             ) : null
           }
-          onEndReached={onEndReached}
+          // onEndReached={onEndReached}
           onEndReachedThreshold={0.5}
           style={{ maxHeight: 300 }}
           showsVerticalScrollIndicator={false}
